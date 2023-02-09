@@ -1,0 +1,32 @@
+{
+"_comment": "This is a samle setting file",
+
+"func": ["(data.dic['params'][6]*data.dic['params'][0]**data.dic['params'][4])/(data.dic['params'][0]**data.dic['params'][4]+(data.dic['params'][3]*0.5*(x[1]+x[2]))**data.dic['params'][4]) - data.dic['params'][1]*x[0] + data.dic['params'][5]*cos(t)",
+		"(data.dic['params'][6]*data.dic['params'][0]**data.dic['params'][4])/(data.dic['params'][0]**data.dic['params'][4] + (data.dic['params'][3]*0.5*(x[0]+x[3]))**data.dic['params'][4]) - data.dic['params'][2]*x[1]",
+		"(data.dic['params'][6]*data.dic['params'][0]**data.dic['params'][4])/(data.dic['params'][0]**data.dic['params'][4] + (data.dic['params'][3]*0.5*(x[0]+x[3]))**data.dic['params'][4]) - data.dic['params'][1]*x[2]",
+		"(data.dic['params'][6]*data.dic['params'][0]**data.dic['params'][4])/(data.dic['params'][0]**data.dic['params'][4] + (data.dic['params'][3]*0.5*(x[1]+x[2]))**data.dic['params'][4]) - data.dic['params'][1]*x[3]"
+	],
+"//": "params1=params2",
+
+"xrange": [ -20,50],
+"yrange": [ -20,50],
+"alpha": 0.4,
+
+"params":	[1, 0.5, 0.5, 0.4, 4,  12,  11 ],
+"x0":	[5.63105134,  6.06570898, 5.63105134,  6.06570898 ],
+
+"dparams":	[0.1, 0.1, 0.1, 0.1, 2, 0.1, 0.1],
+
+"eps":	0.00001,
+"errors": 0.0000001,
+"explosion":	100,
+"period":	1,
+"tick":	0.01,
+"ite_max":	50,
+"extrap":	2,
+"increment_param": 5,
+"increment_param2": 6,
+"variable_param": 0,
+"target": -1,
+"maxTime":1000
+}
