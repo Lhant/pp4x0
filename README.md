@@ -1,6 +1,6 @@
-# pp4x0
+# pp4x0  Not completed
 
-#Visualization transformation based on pp
+Visualization transformation based on pp
 
 Input differential equations, params, initial values
 
