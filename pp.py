@@ -33,8 +33,8 @@ def main():
                           rtol=1e-6,
                           # method = 'DOP853',
                           method='RK45', args=(data,))
-        for i in range(4):
-            plt.subplot(221+i)
+        for i in range(data.dic['fun_num']):
+            plt.subplot(data.dic['fig_arr']+i)
             if data.visual_orbit == 1:
                 plt.plot(state.y[0, :], state.y[i, :],
                          linewidth=1, color=(0, 0, 0),

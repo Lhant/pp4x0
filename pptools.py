@@ -26,7 +26,7 @@ def init():
     data = DataStruct()
 
     data.fig = plt.figure(figsize=(10, 10))
-    data.ax = [data.fig.add_subplot(i) for i in range(221, 225)]
+    data.ax = [data.fig.add_subplot(i) for i in range(data.dic['fig_arr'], data.dic['fig_arr']+data.dic['fun_num'])]
     redraw_frame(data)
     data.visual_orbit = 1
 
@@ -46,13 +46,16 @@ def redraw_frame(data):
     # rc("text", usetex=True)
     xr = data.dic['xrange']
     yr = data.dic['yrange']
+    xyLabelList = data.dic['params_name']
+    i = 0
     for axItem in data.ax:
         axItem.set_xlim(xr)
         axItem.set_ylim(yr)
         # data.ax.set_xlabel(r'$\sin x$')
         # data.ax.set_ylabel(r'$y$')
-        axItem.set_xlabel("x")
-        axItem.set_ylabel("y")
+        axItem.set_xlabel(xyLabelList[i][0])
+        axItem.set_ylabel(xyLabelList[i][1])
+        i += 1
 
 
 # data.ax.grid(c = 'gainsboro', zorder = 9)
@@ -93,7 +96,7 @@ def keyin(event, data):
         print("done.")
     elif event.key == ' ' or event.key == 'e':
         # plt.cla()
-        for i in range(221, 225):
+        for i in range(data.dic['fig_arr'], data.dic['fig_arr']+data.dic['fun_num']):
             plt.subplot(i)
             plt.cla()
         redraw_frame(data)
@@ -121,19 +124,22 @@ def keyin(event, data):
 
 
 def show_param(data):
-    plt.subplot(221)
+    plt.subplot(data.dic['fig_arr'])
     s = ""
     cnt = 0
     for key in data.dic['params']:
+        if cnt==3:
+            s+='\n'
         s += " p{:d}: {:.5f}  ".format(cnt, key)
         cnt += 1
     plt.title(s, color='b')
 
 
 def on_click(event, data):
-    print(event.inaxes == data.ax[0])
+    # print(event.inaxes == data.ax[0])
     if event.xdata == None or event.ydata == None:
         return
+    # make your own changes
     # if event.inaxes == data.ax[0]:
     #     print('x0,x0')
     #     print(data.dic['x0'])
