@@ -7,7 +7,6 @@
 		"(data.dic['params'][6]*data.dic['params'][0]**data.dic['params'][4])/(data.dic['params'][0]**data.dic['params'][4] + (data.dic['params'][3]*0.5*(x[1]+x[2]))**data.dic['params'][4]) - data.dic['params'][1]*x[3]"
 	],
 "//": "params1=params2",
-
 "xrange": [ -20,50],
 "yrange": [ -20,50],
 "alpha": 0.4,
@@ -28,5 +27,8 @@
 "increment_param2": 6,
 "variable_param": 0,
 "target": -1,
-"maxTime":1000
+"maxTime":1000,
+"fun_num":4,
+"fig_arr": 221,
+"params_name": [["x0", "x0"],["x0", "x1"], ["x0", "x2"], ["x0", "x3"]]
 }
